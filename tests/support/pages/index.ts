@@ -4,9 +4,7 @@ export class BlogPage {
     constructor(private page: Page) { }
 
     async go() {
-        await this.page.goto('https://blog.agibank.com.br/', {
-            
-        })
+        await this.page.goto('/')
     }
 
     async openSearch() {
@@ -14,7 +12,7 @@ export class BlogPage {
     }
 
     async search(texto: string) {
-        await this.page.goto(`https://blog.agibank.com.br/?s=${texto}`)
+        await this.page.goto(`/?s=${texto}`)
     }
     
     async shouldHaveResults(texto: string) {
